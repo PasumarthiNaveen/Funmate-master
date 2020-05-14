@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@drawable/half_round">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:gravity="center_vertical"
+        android:paddingBottom="10dp"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:id="@+id/tv_total_comment"
+        android:background="@drawable/horizontal_bar_single"
+        android:layout_height="40dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/rv_comment"/>
+        <com.xitij.tiktuk.View.LoadingView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/comment_loader"
+            android:visibility="gone"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/flCommentBox"
+        android:background="@drawable/horizontal_bar_dual">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="100dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:inputType="textMultiLine"
+            android:id="@+id/et_comment_box"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical"
+            android:textColorHint="@android:color/tab_indicator_text"
+            android:textColor="@android:color/tab_indicator_text"
+            android:hint="@string/write_a_comment"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/tv_comment_layout"/>
+
+        <Button
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/btn_comment_send"
+            android:background="@drawable/ic_send"
+            android:layout_gravity="center_vertical|end"/>
+
+    </FrameLayout>
+
+</LinearLayout>

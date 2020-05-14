@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/user_menu"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_more"
+        android:title="@string/app_name">
+        <menu>
+            <item android:id="@+id/menu_change_password"
+                android:icon="@drawable/ic_locked_primary"
+                android:title="@string/change_password"/>
+            <item android:id="@+id/menu_wallet"
+                android:icon="@drawable/ic_wallet"
+                android:title="@string/wallet"/>
+            <item android:id="@+id/menu_privacy_policy"
+                android:icon="@drawable/ic_privacy_policy_primary"
+                android:title="@string/privacy_policy"/>
+            <item android:id="@+id/menu_rate_us"
+                android:icon="@drawable/ic_rate_us"
+                android:title="@string/rate_us"/>
+            <item android:id="@+id/menu_Logout"
+                android:icon="@drawable/ic_logout"
+                android:title="@string/log_out"/>
+        </menu>
+    </item>
+</menu>

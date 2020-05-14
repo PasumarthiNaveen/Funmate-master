@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:id="@+id/update_profile_toolbar"
+            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/action_bar_name_size"
+                android:textColor="@color/pink_A400"
+                android:gravity="center"
+                android:text="@string/update_profile"/>
+        </androidx.appcompat.widget.Toolbar>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_below="@id/update_profile_toolbar"
+            android:id="@+id/fl_upload_image"
+            android:layout_height="wrap_content">
+            <ImageView android:layout_width="100dp"
+                android:id="@+id/iv_upload_photo"
+                android:background="@color/white"
+                android:layout_gravity="center"
+                android:layout_height="100dp"/>
+            <ImageView android:layout_width="100dp"
+                android:id="@+id/iv_layer"
+                android:layout_gravity="center"
+                android:src="@drawable/trans_round"
+                android:layout_height="100dp"/>
+        </FrameLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/il_update_user_name"
+            android:layout_below="@id/fl_upload_image"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:layout_margin="5dp"
+                android:id="@+id/et_update_user_name"
+                android:background="@drawable/et_line"
+                android:hint="@string/username"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.xitij.tiktuk.View.LoadingView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:id="@+id/loader_update_username"
+            android:visibility="gone"
+            android:layout_alignTop="@id/il_update_user_name"
+            android:layout_alignEnd="@id/il_update_user_name"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/il_update_first_name"
+            android:layout_below="@id/il_update_user_name"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:layout_margin="5dp"
+                android:id="@+id/et_update_first_name"
+                android:background="@drawable/et_line"
+                android:hint="@string/first_name"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:layout_margin="5dp"
+            android:layout_below="@id/il_update_first_name"
+            android:id="@+id/et_update_lasst_name"
+            android:background="@drawable/et_line"
+            android:hint="@string/last_name"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:longClickable="false"
+            android:textSize="16dp"
+            android:layout_below="@id/et_update_lasst_name"
+            android:id="@+id/et_update_bio"
+            android:background="@drawable/et_line"
+            android:inputType="textMultiLine"
+            android:hint="@string/bio"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/limit_bio"
+            android:text="@string/limit_bio_length"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/pink_A400"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:layout_below="@id/et_update_bio"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/et_update_email"
+            android:inputType="textEmailAddress"
+            android:layout_below="@id/limit_bio"
+            android:layout_margin="5dp"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="10dp"
+            android:hint="@string/e_mail"
+            android:background="@drawable/et_line"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:layout_margin="5dp"
+            android:drawableStart="@drawable/ic_instagram"
+            android:drawablePadding="10dp"
+            android:layout_below="@id/et_update_email"
+            android:id="@+id/et_update_insta"
+            android:background="@drawable/et_line"
+            android:hint="@string/instagram_username"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:layout_margin="5dp"
+            android:drawableStart="@drawable/ic_youtube"
+            android:drawablePadding="10dp"
+            android:layout_below="@+id/et_update_insta"
+            android:id="@+id/et_update_youtube"
+            android:background="@drawable/et_line"
+            android:hint="@string/youtube_channel"/>
+
+
+        <com.xitij.tiktuk.View.LoadingView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:id="@+id/update_profile_loader"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rlUpdateProgress"
+            android:background="@color/transparent_black_20"
+            android:visibility="gone">
+            <ProgressBar
+                android:id="@+id/update_circularProgressbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="25"
+                android:layout_centerInParent="true"
+                android:progressDrawable="@drawable/circular"
+                android:secondaryProgress="100" />
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/whitecircle"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:id="@+id/tv_update_progress"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:gravity="center"
+                android:text="25%"
+                android:layout_centerInParent="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

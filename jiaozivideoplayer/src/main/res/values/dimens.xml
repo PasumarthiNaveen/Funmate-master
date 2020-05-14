@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="jz_start_button_w_h_normal">45dp</dimen>
+    <dimen name="jz_start_button_w_h_fullscreen">62dp</dimen>
+
+    <dimen name="LoadingDots_dots_size_default">12dp</dimen>
+    <dimen name="LoadingDots_dots_space_default">2dp</dimen>
+    <dimen name="LoadingDots_jump_height_default">12dp</dimen>
+</resources>

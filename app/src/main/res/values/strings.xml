@@ -1,0 +1,126 @@
+<resources>
+    <string name="app_name">Funmate</string>
+    <string name="e_mail">E-mail</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log In</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="pin_code">PIN Code</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="err_first_name">Please enter your first name.</string>
+    <string name="err_msg_password">Please enter your password and must have at least 6 characters.</string>
+    <string name="err_msg_email">Please enter your E-mail.</string>
+    <string name="send_e_mail">Send E-mail</string>
+    <string name="username">Username</string>
+    <string name="sign_up_title">Sign Up to Fun mate</string>
+    <string name="terms_and_conditions">By signing up,you confirm that\nyou agree to our Terms &amp; Conditions</string>
+    <string name="forget_password">Forget password? Click here</string>
+    <string name="log_in_title">Log in to Fun mate</string>
+    <string name="follow">follow</string>
+    <string name="unfollow">following</string>
+    <string name="or">OR</string>
+    <string name="sign_up_with_email">Sign Up With Email</string>
+    <string name="please_connect_to_internet">Please connect to internet.</string>
+
+    <string name="path_search">
+       M141,17 A9,9 0 1,1 142,16 L149,23
+    </string>
+    <string name="write_a_comment">Write a comment…</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="default_notification_channel_id">Fun mate</string>
+    <string name="done">Done</string>
+    <string name="bio">Bio</string>
+    <string name="contests">Contests</string>
+    <string name="skip">Skip</string>
+    <string name="camera">Camera</string>
+    <string name="dialog_gallary">Gallary</string>
+    <string name="existing_user">This username already exists.</string>
+    <string name="enter_username">Please enter username.</string>
+    <string name="err_existing_email">E-mail already exists. Try another one!</string>
+    <string name="err_last_name">Please enter your last name.</string>
+    <string name="err_pin_code">Please enter proper PIN Code.</string>
+    <string name="err_mobile_no">Enter valid mobile number.</string>
+    <string name="err_must_login">You must log in to watch your following videos.</string>
+    <string name="err_large_file">The file you\'ve choosed is larger than 5MB. Fun mate provide uploading file below 5MB. Would you like to compress the file?</string>
+    <string name="ok">OK</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="compresssing">Compresssing…</string>
+    <string name="progress_zero">0 %</string>
+    <string name="compress">Compress</string>
+    <string name="upload">Upload</string>
+    <string name="upload_video">Upload Video</string>
+    <string name="clear">Clear</string>
+
+    <string name="limit_bio_length" translatable="false">%d line, %d character remaining</string>
+    <string name="user_name" translatable="false">\@%s</string>
+
+    <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
+    <string name="change_password">Change Password</string>
+    <string name="cnf_password">Confirm Password</string>
+    <string name="new_password">New Password</string>
+    <string name="old_passsword">Old Password</string>
+    <string name="err_cnf_msg_password">Password should match</string>
+    <string name="log_out">Log Out</string>
+    <string name="rate_us">Rate us</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="no_bio_yet">No bio yet.</string>
+    <string name="no_video_yet">No video found.</string>
+    <string name="share">Share</string>
+    <string name="download">Download</string>
+    <string name="can_not_connect_server">Can\'t connect to server.</string>
+    <string name="err_msg_crt_password">Please enter correct password.</string>
+    <string name="search_people">Search people</string>
+    <string name="forgetpassword">Forget Password</string>
+    <string name="instagram_username">Instagram Username</string>
+    <string name="youtube_channel">Youtube channel url</string>
+    <string name="retry">Retry</string>
+
+
+    <!--<string name="facebook_app_id">594643011036658</string>-->
+    <string name="facebook_app_id">252044086203711</string>
+    <string name="fb_login_protocol_scheme">fb252044086203711</string>
+    <!--<string name="fb_login_protocol_scheme">fb594643011036658</string>-->
+    
+    
+    <!-- Facebook placement id for Ads -->
+    <string name="facebook_ads_medium_rectangle">572690983241559_572691963241461</string>
+    <string name="facebook_ads_banner">572690983241559_572691313241526</string>
+    <string name="facebook_ads_native_banner">665297907285518_665468427268466</string>
+    <string name="facebook_ads_native_image">572690983241559_572696016574389</string>
+    <string name="facebook_ads_native">252044086203711_257529242321862</string>
+    <string name="facebook_ads_interestial">252044086203711_255631449178308</string>
+    <string name="icon_desc">Ad icon</string>
+    <string name="image_desc">Ad image</string>
+    <string name="valid_username">Allowed characters (i.e. a,A,0,.,_) and 2 to 20 character max.</string>
+    <string name="preparing">Preparing</string>
+    <string name="google_web_client_id">694573418999-5vaqp0grdfe2kcvbi4u6co3iiih9jq34.apps.googleusercontent.com</string>
+    <string name="pay_d_points">Pay %s points</string>
+    <string name="referal_code">Referral code</string>
+    <string name="points">Points</string>
+    <string name="wallet">Wallet</string>
+    <string name="hint_paypal_account">Paypal Account</string>
+    <string name="hint_paytm_no">Paytm registered number</string>
+    <string name="redeem">Redeem</string>
+    <string name="err_enter_points">Enter Points.</string>
+    <string name="err_paypay_account">Provide paypal account number</string>
+    <string name="err_paytm_number">Provide registered paytm number</string>
+    <string name="payment_request_success">Request sent successfully.</string>
+    <string name="request_payment">Request Payment</string>
+
+    <!--
+
+    FB
+    7201815320
+    d@r$#@kG123
+
+    google
+    darshakgolakiya4@gmail.com
+    d@r$#@kG123
+
+    -->
+
+    <!-- Firebase -->
+    <!-- Email:- tiktuk.xitij@gmail.com  -->
+
+</resources>

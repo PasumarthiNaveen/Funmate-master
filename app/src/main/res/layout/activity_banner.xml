@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_banner"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rl_splash"
+        android:background="@color/black"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logo"
+            android:layout_centerInParent="true"/>
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/chanp"
+            android:visibility="gone"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/vp_banner"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        app:tabGravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        app:tabMaxWidth="15dp"
+        app:tabMinWidth="10dp"
+        app:tabIndicatorHeight="0dp"
+        app:tabBackground="@drawable/banner_dot_seletor"
+        android:id="@+id/tl_banner"/>
+
+    <com.xitij.tiktuk.View.LoadingView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:id="@+id/loader_banner"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rl_retry"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:id="@+id/tv_error"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="@string/can_not_connect_server"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_error"
+            android:paddingStart="10dp"
+            android:id="@+id/tv_retry"
+            android:paddingEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_round_black"
+            android:textColor="@color/white"
+            android:text="@string/retry"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:id="@+id/btn_skip"
+        android:visibility="gone"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_height="40dp">
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center"
+            android:clickable="false"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textColor="@color/white"
+            android:background="@drawable/ic_skip"/>
+
+    </FrameLayout>
+
+
+</RelativeLayout>

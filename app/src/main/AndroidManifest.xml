@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.xitij.tiktuk">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:name=".FourChamp"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme.NoActionBar.FullScreen">
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.xitij.tiktuk.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+
+
+
+        <activity android:name=".activity.MainActivity">
+
+        </activity>
+        <activity android:name=".activity.ForgetPasswordActivity" />
+        <activity android:name=".activity.SignUpActivity">
+
+        </activity>
+        <activity android:name=".activity.LogInActivity">
+
+        </activity>
+        <activity android:name=".activity.HomeActivity" />
+        <activity android:name=".activity.UserActivity" />
+        <activity android:name=".activity.SearchActivity" />
+        <activity android:name=".activity.AddActivity" />
+        <activity android:name=".activity.PrivacyPolicy" />
+        <activity android:name=".activity.ProfileActivity" />
+
+        <activity android:name=".activity.UpdateProfileActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat"/>
+        <activity android:name=".activity.ContestActivity" />
+        <activity android:name=".activity.BannerActivity"
+            android:launchMode="singleTask">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- Branch URI scheme -->
+            <intent-filter>
+                <data android:scheme="tiktuk" android:host="open" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.ChangePasswordActivity" />
+
+        <activity android:name=".activity.VideoRecorderActivity" android:theme="@style/WhiteScreenIssueTheme"/>
+        <activity
+            android:name=".activity.PreviewVideoActivity"
+            android:theme="@style/black_status" />
+        <activity android:name=".activity.PostVideoActivity" />
+
+        <activity android:name=".activity.SoundListActivity" />
+        <activity android:name=".activity.TestActivity" >
+
+        </activity>
+
+
+
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity android:name=".activity.LoginWithFacebook" />
+        <activity android:name=".activity.PointsActivity" />
+        <activity android:name=".activity.UserPointsActivity" />
+
+
+        <service android:name=".NotificationService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_eE4e87diGgVrSf" />
+
+        <!-- Branch init -->
+        <meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_boHb24huKXxmc8sgSTAhejeoxrcWqTXT" />
+        <meta-data android:name="io.branch.sdk.BranchKey.test" android:value="key_test_poOkQo4DncCT7pnKkc0kvlfasspacrNz" />
+
+        <!-- Branch testing (TestMode "true" to simulate fresh installs on dev environment) -->
+        <meta-data android:name="io.branch.sdk.TestMode" android:value="false" />
+
+        <!-- Branch install referrer tracking -->
+        <receiver android:name="io.branch.referral.InstallListener" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <!--   Goolge Analytics   -->
+
+        <!--
+          Optionally, register AnalyticsReceiver and AnalyticsService to support background
+          dispatching on non-Google Play devices
+        -->
+        <receiver
+            android:name="com.google.android.gms.analytics.AnalyticsReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.analytics.AnalyticsService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!--
+             Optionally, register CampaignTrackingReceiver and CampaignTrackingService to enable
+             installation campaign reporting
+        -->
+        <receiver
+            android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.google.android.gms.analytics.CampaignTrackingService" />
+
+    </application>
+
+</manifest>

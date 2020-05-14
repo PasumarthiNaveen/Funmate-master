@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="50dp"
+        android:id="@+id/iv_commentor_photo"
+        android:layout_height="50dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@id/iv_commentor_photo"
+        android:id="@+id/tv_comment"
+        android:background="@drawable/messege_layout"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_comment"
+        android:padding="5dp"
+        android:gravity="end"
+        android:id="@+id/linlayUserComment"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_delete_comment"
+            android:textSize="9dp"
+            android:textStyle="bold"
+            android:textColor="@color/pink_A400"
+            android:text="Delete"/>
+
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_comment_status"
+            android:textSize="9dp"
+            android:layout_marginStart="10dp"
+            android:text="sending" />
+    </LinearLayout>
+</RelativeLayout>

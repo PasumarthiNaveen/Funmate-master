@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:id="@+id/linlay_video_upload"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_upload_video"
+            android:layout_gravity="center"
+            android:id="@+id/iv_upload_video"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_video_upload"
+            android:layout_marginTop="10dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:background="@drawable/btn_round"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/upload"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_video_compress"
+            android:layout_marginTop="10dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:paddingStart="15dp"
+            android:paddingEnd="34dp"
+            android:visibility="gone"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_compress"
+            android:background="@drawable/btn_round"
+            android:layout_gravity="center"
+            android:text="@string/compress"/>
+    </LinearLayout>
+
+    <!-- Banner Ads -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="70dp"
+        android:id="@+id/fl_native_banner_ads"
+        android:layout_marginBottom="70dp"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rlProgress"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <ProgressBar
+                android:id="@+id/video_circularProgressbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="25"
+                android:layout_centerInParent="true"
+                android:progressDrawable="@drawable/circular"
+                android:secondaryProgress="100" />
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/whitecircle"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:id="@+id/tv_video_progress"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:gravity="center"
+                android:text="25%"
+                android:layout_centerInParent="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="invisible"
+            android:layout_weight="1">
+            <ProgressBar
+                android:id="@+id/image_circularProgressbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="25"
+                android:layout_centerInParent="true"
+                android:progressDrawable="@drawable/circular"
+                android:secondaryProgress="100" />
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/whitecircle"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:id="@+id/tv_image_progress"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:gravity="center"
+                android:text="25%"
+
+                android:layout_centerInParent="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/linlay_upload_done"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_done"/>
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_upload_another"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textAllCaps="false"
+            android:text="Upload another"
+            android:background="@drawable/btn_round"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_procced_payment"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        android:text="Procced Payment"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_round" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:id="@+id/toolbar_add"
+        app:contentInsetStart="0dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="@dimen/action_bar_name_size"
+            android:textColor="@color/pink_A400"
+            android:gravity="center"
+            android:text="@string/upload_video"
+            android:layout_height="wrap_content" />
+    </androidx.appcompat.widget.Toolbar>
+
+</FrameLayout>

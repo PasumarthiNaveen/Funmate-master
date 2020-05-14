@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.xitij.tiktuk.View.LikeButton.AndroidDotView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:id="@+id/dotView"
+        />
+
+    <com.xitij.tiktuk.View.LikeButton.AndroidCircleView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:id="@+id/circleView"/>
+
+    <ImageView
+        android:id="@+id/starImg"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center" />
+
+    <TextView android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:id="@+id/likeCount"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textColor="#99FFFFFF"
+        android:text="9999"
+        android:textSize="9dp"
+        android:layout_gravity="center"/>
+</merge>

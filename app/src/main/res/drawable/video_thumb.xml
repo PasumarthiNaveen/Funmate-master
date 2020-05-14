@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/blue_grey_600"/>
+        </shape>
+    </item>
+    <item android:drawable="@drawable/ic_video" android:right="50dp" android:left="50dp" android:top="50dp" android:bottom="50dp">
+
+    </item>
+</layer-list>
